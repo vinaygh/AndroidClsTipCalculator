@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LandingTipCal" >
+
+    <EditText
+        android:id="@+id/etEnterAmountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Enter amount" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn10PercentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etEnterAmountID"
+        android:layout_below="@+id/etEnterAmountID"
+        android:layout_marginTop="54dp"
+        android:onClick="calculateTip"
+        android:hint="@string/TenPercentButtonName"
+        android:text="@string/TenPercentButtonLabel" />
+
+    <Button
+        android:id="@+id/btn15PercentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn10PercentID"
+        android:layout_alignBottom="@+id/btn10PercentID"
+		android:onClick="calculateTip"
+        android:layout_toRightOf="@+id/btn10PercentID"
+        android:text="@string/FifteenPercentButtonLabel" />
+
+    <Button
+        android:id="@+id/btn20PercentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn15PercentID"
+		android:onClick="calculateTip"
+        android:layout_toRightOf="@+id/btn15PercentID"
+        android:text="@string/TwentyPercentButtonLabel" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn15PercentID"
+        android:layout_below="@+id/btn15PercentID"
+        android:layout_marginTop="57dp"
+        android:text="TextView" />
+
+</RelativeLayout>
