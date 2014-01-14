@@ -58,6 +58,6 @@
         android:layout_alignLeft="@+id/btn15PercentID"
         android:layout_below="@+id/btn15PercentID"
         android:layout_marginTop="57dp"
-        android:text="TextView" />
+        android:text="@string/EmptyString" />
 
 </RelativeLayout>

@@ -13,14 +13,14 @@ import android.widget.TextView;
 public class LandingTipCal extends Activity {
 
 	EditText etBillAmountEntered = null;
-	TextView afterTipLabel = null;
+	TextView tipLabel = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_landing_tip_cal);
 		etBillAmountEntered = (EditText) findViewById(R.id.etEnterAmountID);
-		afterTipLabel= (TextView) findViewById(R.id.textView1);
+		tipLabel= (TextView) findViewById(R.id.textView1);
 	}
 
 	@Override
@@ -41,10 +41,11 @@ public class LandingTipCal extends Activity {
     	Double tipPercentage = Double.valueOf(split[0]);// calculate the TIP
     	
      
-    	Double afterTipAmount = (double) ((beforeTipAmount*tipPercentage)/100);
-    	// calculating final amount using the TIP
+    	Double calculatedTip = (double) ((beforeTipAmount*tipPercentage)/100);
+    	// calculating final tip
         
-    	afterTipLabel.setText(String.valueOf(afterTipAmount));
+    	
+    	tipLabel.setText("Tip is: " + String.valueOf(calculatedTip));
         // Printing it to textview label on the android screen
         
     }
